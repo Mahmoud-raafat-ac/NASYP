@@ -1354,3 +1354,9 @@ section {
 	object-fit: cover;
 	z-index: -1;
 }
+
+@media (max-width: 576px) {
+	.tabs-text{
+		font-size: 1rem !important;
+	}
+}
