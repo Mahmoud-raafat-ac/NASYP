@@ -140,7 +140,7 @@ a:hover {
   justify-content: space-between;
   padding: 5px 15px 7px 15px;
   margin-left: 5px;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   white-space: nowrap;
   transition: 0.3s;
@@ -341,7 +341,7 @@ a:hover {
   width: 100%;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(0deg, #fbb72587 10%, #0f004c 110%);
+  background: linear-gradient(0deg, #0f004c57 10%, #0f004c 110%);
   padding: 0;
 }
 
