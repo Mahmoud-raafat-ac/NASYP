@@ -106,7 +106,7 @@ a:hover {
 }
 
 #header .logo img {
-  padding: 0;
+  padding: 8px;
   margin: 0;
   max-height: 11vh;
 }
