@@ -23,4 +23,8 @@ router.get('/vip', function (req, res, next) {
   res.redirect("https://docs.google.com/forms/d/e/1FAIpQLSdetuRB4Md8AYItNf9ORjQwE2nYmYrEJ70E-6sXkI75GgxHhw/viewform?usp=sf_link");
 });
 
+router.get('/fund-reg', function (req, res, next) {
+  res.redirect("https://docs.google.com/forms/d/e/1FAIpQLSddi88-An_-SQ87PWpYnkt97qY8xsiU6QxphlYc0slVU6MmVQ/viewform?usp=sf_link");
+});
+
 module.exports = router;
