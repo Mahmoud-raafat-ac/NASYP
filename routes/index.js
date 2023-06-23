@@ -35,4 +35,8 @@ router.get('/fund-reg', function (req, res, next) {
   res.redirect("https://docs.google.com/forms/d/e/1FAIpQLSddi88-An_-SQ87PWpYnkt97qY8xsiU6QxphlYc0slVU6MmVQ/viewform?usp=sf_link");
 });
 
+router.get('/confirm', function (req, res, next) {
+  res.redirect("https://docs.google.com/forms/d/e/1FAIpQLScT63bRUXgOvGyk2qnVR5i4NuqezLesNJIOoEAYZn4hXrPTFA/viewform?usp=sf_link");
+});
+
 module.exports = router;
