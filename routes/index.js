@@ -14,6 +14,10 @@ router.get("/speakers", function (req, res, next) {
   res.render("speakers");
 });
 
+router.get("/payment-details", function (req, res, next) {
+  res.render("payment-datails");
+});
+
 /* Redirect Links. */
 router.get("/ambassadors", function (req, res, next) {
   res.redirect(

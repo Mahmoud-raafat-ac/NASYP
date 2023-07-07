@@ -1,46 +1,47 @@
-(function() {
+(function () {
 
   // countdown --start
   const second = 1000,
-  minute = second * 60,
-  hour = minute * 60,
-  day = hour * 24;
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
 
   //I'm adding this section so I don't have to keep updating this pen every year :-)
   //remove this if you don't need it
   let today = new Date(),
-  dd = String(today.getDate()).padStart(2, "0"),
-  mm = String(today.getMonth() + 1).padStart(2, "0"),
-  yyyy = today.getFullYear(),
-  nextYear = yyyy + 1,
-  dayMonth = "08/24/",
-  birthday = dayMonth + yyyy;
+    dd = String(today.getDate()).padStart(2, "0"),
+    mm = String(today.getMonth() + 1).padStart(2, "0"),
+    yyyy = today.getFullYear(),
+    nextYear = yyyy + 1,
+    dayMonth = "08/24/",
+    birthday = dayMonth + yyyy;
 
   today = mm + "/" + dd + "/" + yyyy;
   if (today > birthday) {
-  birthday = dayMonth + nextYear;
+    birthday = dayMonth + nextYear;
   }
   //end
 
   const countDown = new Date(birthday).getTime(),
-  x = setInterval(function() {    
+    x = setInterval(function () {
 
-    const now = new Date().getTime(),
-          distance = countDown - now;
-
-      document.getElementById("days").innerText = Math.floor(distance / (day)),
-      document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-      document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-      document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-
-    //do something later when date is reached
-    if (distance < 0) {
-      document.getElementById("headline").innerText = "Lets Go!";
-      document.getElementById("countdown").style.display = "none";
-      clearInterval(x);
-    }
-    //seconds
-  }, 0)
+      const now = new Date().getTime(),
+        distance = countDown - now;
+      if (document.getElementById("days")){
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+        document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+        document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+        document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+      }
+      
+      //do something later when date is reached
+      if (distance < 0) {
+        document.getElementById("headline").innerText = "Lets Go!";
+        document.getElementById("countdown").style.display = "none";
+        clearInterval(x);
+      }
+      //seconds
+    }, 0)
   // countdown --end
 
   "use strict";
@@ -147,7 +148,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -156,7 +157,7 @@
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function(e) {
+  on('click', '.navbar .dropdown > a', function (e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
@@ -166,7 +167,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -204,9 +205,9 @@
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -214,7 +215,7 @@
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        portfolioIsotope.on('arrangeComplete', function() {
+        portfolioIsotope.on('arrangeComplete', function () {
           AOS.refresh()
         });
       }, true);
