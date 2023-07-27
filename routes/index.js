@@ -43,4 +43,8 @@ router.get('/confirm', function (req, res, next) {
   res.redirect("https://docs.google.com/forms/d/e/1FAIpQLScT63bRUXgOvGyk2qnVR5i4NuqezLesNJIOoEAYZn4hXrPTFA/viewform?usp=sf_link");
 });
 
+router.get('/egyfund', function (req, res, next) {
+  res.redirect("https://docs.google.com/forms/d/e/1FAIpQLSfNa2oS8t2FlZ1jv8Aq4Dpmi9ajDnf7wxHSMH7O5sbjyFf-yw/viewform?usp=sf_link");
+});
+
 module.exports = router;
