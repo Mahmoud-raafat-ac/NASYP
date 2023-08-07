@@ -1524,12 +1524,19 @@ section {
     background-position: center!important;
     height: 220px;
     padding: 1em 2em;
-    background: #0f004cc7;
+    /* background: #0f004cc7; */
     border-radius: 10px;
     p {
       font-size: 0.9125rem;
       line-height: 160%;
       color: #999;
     }
+  }
+}
+
+.flip:hover {
+  >.front,
+  >.back {
+    background: #0f004cc7;
   }
 }
