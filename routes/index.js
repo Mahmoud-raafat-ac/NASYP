@@ -13,8 +13,8 @@ router.get("/registration", function (req, res, next) {
 router.get("/speakers", function (req, res, next) {
   res.render("speakers");
 });
-router.get("/program", function (req, res, next) {
-  res.render("program");
+router.get("/Schedule", function (req, res, next) {
+  res.render("Schedule");
 });
 
 router.get("/payment-details", function (req, res, next) {
