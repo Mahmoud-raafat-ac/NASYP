@@ -56,4 +56,10 @@ router.get("/egyfund", function (req, res, next) {
   );
 });
 
+router.get("/program-pdf", function (req, res, next) {
+  res.redirect(
+    "https://drive.google.com/file/d/1IzezuouSjVGwFsnknaMnjRn3HwMxhIfv/view?usp=sharing"
+  );
+});
+
 module.exports = router;
