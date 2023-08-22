@@ -17,6 +17,10 @@ router.get("/program", function (req, res, next) {
   res.render("program");
 });
 
+router.get("/help", function (req, res, next) {
+  res.render("help");
+});
+
 router.get("/payment-details", function (req, res, next) {
   res.render("payment-datails");
 });
